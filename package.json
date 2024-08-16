@@ -1,0 +1,32 @@
+{
+  "name": "node-linqjs",
+  "version": "1.0.0",
+  "description": "A package that provides all LINQ functionality for JavaScript/Node.js",
+  "main": "linq.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matteotorna/node-linqjs"
+  },
+  "keywords": [
+    "linq",
+    "linqjs",
+    "linq-js",
+    "Linq",
+    "js-linq",
+    "LINQJS",
+    "LINQ",
+    "Enumerable",
+    "query",
+    "Query",
+    "jslinq",
+    "linq_js",
+    "linq.js",
+    "node-linqjs",
+    "node-linq"
+],
+  "author": "",
+  "license": "MIT"
+}
