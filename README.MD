@@ -12,11 +12,14 @@ This package provides LINQ-like functionality for JavaScript, allowing you to pe
     <a href="https://www.npmjs.com/package/node-linqjs"><img src="https://img.shields.io/npm/dt/node-linqjs.svg?style=for-the-badge" alt="NPM downloads" /></a>
   </p>
 </div>
+
 ## Installation
+\
 ```bash
 npm install node-linqjs
 ```
 ## Usage
+
 ```javascript
 const { linq } = require('node-linqjs');
 
