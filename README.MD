@@ -25,13 +25,13 @@ npm install node-linqjs
 `unpkg`
 
 ```javascript
-<script src="https://unpkg.com/node-linqjs-minified@1.1.0/dist/node-linqjs-minified.min.js"></script>
+<script src="https://unpkg.com/node-linqjs@1.1.0/dist/node-linqjs-minified.min.js"></script>
  ```
 
  `jsdelivr`
 
 ```javascript
-<script src="https://cdn.jsdelivr.net/npm/node-linqjs-minified@1.1.0/dist/node-linqjs-minified.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/node-linqjs@1.1.0/dist/node-linqjs-minified.min.js"></script>
  ```
 
 ## Node
