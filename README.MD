@@ -14,7 +14,7 @@ This package provides LINQ-like functionality for JavaScript, allowing you to pe
 </div>
 
 ## Installation
-\
+
 ```bash
 npm install node-linqjs
 ```
