@@ -493,8 +493,47 @@ class Enumerable {
     return lookup;
   }
 
-  cast() {
-    return this;
+  cast(type) {
+    const self = this;
+    return new Enumerable({
+      *[Symbol.iterator]() {
+        for (const item of self) {
+          if (type === Number) {
+            yield Number(item);
+          } else if (type === String) {
+            yield String(item);
+          } else if (type === Boolean) {
+            yield Boolean(item);
+          } else if (type === BigInt) {
+            yield BigInt(item);
+          } else if (type === Symbol) {
+            yield Symbol(item.toString());
+          } else if (type === Object) {
+            yield Object(item);
+          } else if (type === Array) {
+            yield Array.isArray(item) ? item : [item];
+          } else if (type === Function) {
+            yield typeof item === 'function' ? item : () => item;
+          } else if (type === Date) {
+            yield item instanceof Date ? item : new Date(item);
+          } else if (type === RegExp) {
+            yield item instanceof RegExp ? item : new RegExp(item);
+          } else if (type === Error) {
+            yield item instanceof Error ? item : new Error(item);
+          } else if (typeof type === 'function') {
+            // for pensonalize functions
+            try {
+              yield new type(item);
+            } catch (e) {             
+              yield type(item);
+            }
+          } else {
+            // give the original type
+            yield item;
+          }
+        }
+      }
+    });
   }
 
   ofType(type) {

@@ -2,7 +2,13 @@
   "name": "node-linqjs",
   "version": "1.0.0",
   "description": "A package that provides all LINQ functionality for JavaScript/Node.js",
-  "main": "linq.js",
+  "main": "node-linqjs.js",
+  "browser": "dist/node-linqjs-minified.min.js",
+  "unpkg": "dist/node-linqjs-minified.min.js",
+  "files": [
+    "node-linqjs.js",
+    "dist/node-linqjs-minified.min.js"
+  ],
   "scripts": {
     "test": "test"
   },
@@ -26,7 +32,7 @@
     "linq.js",
     "node-linqjs",
     "node-linq"
-],
+  ],
   "author": "",
   "license": "MIT"
 }

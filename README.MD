@@ -580,9 +580,62 @@ console.log(lookup);
 Casts the elements of a sequence to the specified type.
 
 ```javascript
-const mixedTypes = linq([1, '2', 3, '4']);
-const numbers = mixedTypes.cast(Number).toArray();
-console.log(numbers); // [1, 2, 3, 4]
+// Example for Number
+const numberExample = linq(['1', '2', '3', '4']).cast(Number).toArray();
+console.log('Number:', numberExample); // [1, 2, 3, 4]
+
+// Example for String
+const stringExample = linq([1, 2, 3, 4]).cast(String).toArray();
+console.log('String:', stringExample); // ['1', '2', '3', '4']
+
+// Example for Boolean
+const booleanExample = linq([1, 0, 'true', '', null, undefined]).cast(Boolean).toArray();
+console.log('Boolean:', booleanExample); // [true, false, true, false, false, false]
+
+// Example for BigInt
+const bigIntExample = linq(['1', '2', '3', '4']).cast(BigInt).toArray();
+console.log('BigInt:', bigIntExample); // [1n, 2n, 3n, 4n]
+
+// Example for Symbol
+const symbolExample = linq(['a', 'b', 'c']).cast(Symbol).toArray();
+console.log('Symbol:', symbolExample); // [Symbol(a), Symbol(b), Symbol(c)]
+
+// Example for Object
+const objectExample = linq([1, 'two', true]).cast(Object).toArray();
+console.log('Object:', objectExample); // [Number(1), String('two'), Boolean(true)]
+
+// Example for Array
+const arrayExample = linq([1, [2, 3], 4]).cast(Array).toArray();
+console.log('Array:', arrayExample); // [[1], [2, 3], [4]]
+
+// Example for Function
+const functionExample = linq([1, () => 'hello']).cast(Function).toArray();
+console.log('Function:', functionExample[0](), functionExample[1]()); // 1, 'hello'
+
+// Example for Date
+const dateExample = linq(['2023-01-01', new Date('2023-02-01')]).cast(Date).toArray();
+console.log('Date:', dateExample); // [Date object, Date object]
+
+// Example for RegExp
+const regExpExample = linq(['abc', /def/]).cast(RegExp).toArray();
+console.log('RegExp:', regExpExample); // [/abc/, /def/]
+
+// Example for Error
+const errorExample = linq(['Error 1', new Error('Error 2')]).cast(Error).toArray();
+console.log('Error:', errorExample[0].message, errorExample[1].message); // 'Error 1', 'Error 2'
+
+// Example for a custom class
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+const personExample = linq(['Alice', 'Bob']).cast(Person).toArray();
+console.log('Person:', personExample[0].name, personExample[1].name); // 'Alice', 'Bob'
+
+// Example for an unhandled type (returns the original element)
+const unknownTypeExample = linq([1, 2, 3]).cast(Symbol.iterator).toArray();
+console.log('Unknown Type:', unknownTypeExample); // [1, 2, 3]
 ```
 
 ### ofType(type)
