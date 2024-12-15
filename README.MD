@@ -4,10 +4,10 @@ This package provides LINQ-like functionality for JavaScript, allowing you to pe
 
   <div align="center">
   <p>
-    <a href="https://github.com/matteotorna/node-linqjs/releases/latest">
-  <img src="https://img.shields.io/github/v/release/matteotorna/node-linqjs?style=for-the-badge" alt="GitHub release (latest SemVer)" /></a>
-    <a href="https://github.com/matteotorna/node-linqjs/releases/latest">
-    <img src="https://img.shields.io/github/release-date/matteotorna/node-linqjs?label=latest%20release&style=for-the-badge" alt="Latest release" /></a>
+    <a href="https://github.com/mazeor7/node-linqjs/releases/latest">
+  <img src="https://img.shields.io/github/v/release/mazeor7/node-linqjs?style=for-the-badge" alt="GitHub release (latest SemVer)" /></a>
+    <a href="https://github.com/mazeor7/node-linqjs/releases/latest">
+    <img src="https://img.shields.io/github/release-date/mazeor7/node-linqjs?label=latest%20release&style=for-the-badge" alt="Latest release" /></a>
    <a href="https://www.npmjs.com/package/node-linqjs"><img src="https://img.shields.io/npm/v/node-linqjs.svg?logo=npm&style=for-the-badge" alt="npm version" /></a>
     <a href="https://www.npmjs.com/package/node-linqjs"><img src="https://img.shields.io/npm/dt/node-linqjs.svg?style=for-the-badge" alt="NPM downloads" /></a>
   </p>
